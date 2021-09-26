@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for instance in object_list %}
+   <h3> {{ instance.id }} - <a href='{{ instance.get_absolute_url }}'>{{ instance.from_location }}</a></h3>
+<li>
+    <table class="table">
+        <tr>
+          <th>From Location</th>
+          <th>To Location</th>
+          <th>Product ID</th>
+          <th>Timestamp </th>
+          <th>Quantity</th>
+          
+        </tr>
+        <tr>
+          <td>{{ object.from_location }}</td>
+          <td> {{ object.to_location }}</td>
+          <td>{{ object.product_id }}</td>
+          <td>{{ object.timestamp }}</td>
+          <td>{{ object.from_location_qty  }}</td>
+    </table>
+    
+</li>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form  action='.' method='POST'> {% csrf_token %}
+    <h1> DO you want to delete the record for this product movement:  "{{ object.title }}""?</h1>
+    <p><input type='submit' calue='Yes' /> <a href='../'>Cancel </a></p>
+</form>
+
+{% endblock %}
