@@ -3,4 +3,11 @@
 {% block content %}
 <h1> {{ object.title }}</h1>
 <p> {{ object.description }}</p>
+
+<form action='.' method='POST'> {% csrf_token %}
+    <li>Do you want to update the product "{{object.title }}"?</li>
+    <!-- <p>  <input type='submit' value='Update' /><a href="{% url 'products:product-create.html' %}"></a> </p> -->
+</form>
+
+
 {% endblock %}
