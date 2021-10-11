@@ -19,10 +19,9 @@ from .views import HomePage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',HomePage.as_view(), name='home'),
+    path('/',HomePage.as_view(), name='home'),
     path('products/', include('products.urls', namespace='products')),
     path('locations/', include('locations.urls', namespace='locations')),
     path('mov/', include('productmovement.urls', namespace='productmovement')),
     
-
 ]
