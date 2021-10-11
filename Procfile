@@ -1,1 +1,1 @@
-web: gunicorn inven.wsgi
+web: gunicorn inven.wsgi --log-file -
